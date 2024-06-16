@@ -8,13 +8,7 @@
 
   <ItemGroup>
     <Folder Include="ClassDesigner\" />
-    <Folder Include="Context\" />
-    <Folder Include="Daos\" />
-    <Folder Include="Core\" />
-    <Folder Include="Entities\" />
     <Folder Include="Exceptions\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="Models\" />
   </ItemGroup>
 
   <ItemGroup>
