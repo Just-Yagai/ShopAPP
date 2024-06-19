@@ -7,7 +7,7 @@ namespace Shop.DAL.Interfaces
         List<EmployeesModel> GetEmployees();
         EmployeesModel GetEmployee(int employeeId);
         void SaveEmployee(EmployeesAddModel employeeAdd);
-        void UpdateEmployee(EmployeesUpdateModel employeeAdd);
-        void RemoveEmployee(EmployeesRemovesModel employeeAdd);
+        void UpdateEmployee(EmployeesUpdateModel employeesUpdate);
+        void RemoveEmployee(EmployeesRemovesModel employeesRemove);
     }
 }

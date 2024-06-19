@@ -83,16 +83,22 @@ namespace Shop.Web.Controllers
         // GET: EmployeeController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var employee = employeesDb.GetEmployee(id);
+            return View(employee);
         }
 
         // POST: EmployeeController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(EmployeesRemovesModel employeesRemoves)
         {
             try
             {
+                employeesRemoves.DeleteDate = DateTime.Now;
+                employeesRemoves.DeleteUser = 1;
+                employeesRemoves.Deleted = true;
+
+                this.employeesDb.RemoveEmployee(employeesRemoves);
                 return RedirectToAction(nameof(Index));
             }
             catch

@@ -79,6 +79,8 @@ namespace Shop.DAL.Daos
                 employee.Deleted = employeeRemove.Deleted;
                 employee.DeleteUser = employeeRemove.DeleteUser;
                 employee.DeleteDate = employeeRemove.DeleteDate;
+
+                context.Employees.Update(employee);
                 context.SaveChanges();
             }
         }
